@@ -23,9 +23,12 @@ module.exports = router;
 // crear una ruta para que un usuario pueda crear un tarea
 // idUser, categories, title, description,
 // body petición información para el POST
-/* 
-  {
-    task: {idUser, title, description}, 
-    categories: [1, 4]
-  }
-*/
+
+// El uso de las contraseñas
+// Un paso previo va a ser encriptar las contraseñas
+// para que ni nosotros ni el sistema tenga ese dato
+// bcrypt --> "lasdlkhqweph" --> 09182321khalfn // no hay manera de decodificarlo
+// Que no se expone la contraseña en ningun momento
+
+// instalar bcrypt
+// Vamos a beforeCreate --> Antes de que creemos al usuario vamos a encriptar la contraseña y liuego guardarla en la base de datos
